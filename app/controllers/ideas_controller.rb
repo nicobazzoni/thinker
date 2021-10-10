@@ -12,13 +12,7 @@ class IdeasController < ApplicationController
       else
         render json: {errors: idea.errors.full_messages.to_sentence}, status: :unprocessable_entity
       end
-    else
-      idea = Idea.random_idea
-      if idea.save
-        render json: IdeaSerializer.new(idea).to_serialized_json
-      else
-        render json: {errors: idea.errors.full_messages.to_sentence}, status: :unprocessable_entity
-      end
+   
     end
   end 
 

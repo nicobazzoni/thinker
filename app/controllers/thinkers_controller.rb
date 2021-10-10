@@ -29,7 +29,7 @@ class ThinkersController < ApplicationController
       end
     else
       thinker = Thinker.find_by(id: params[:id])
-      thinker.increase_times_used
+      thinker.increase_times_studied
       render json: ThinkerSerializer.new(thinker).to_serialized_json
     end
       
