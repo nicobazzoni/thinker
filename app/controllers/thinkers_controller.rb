@@ -45,6 +45,6 @@ class ThinkersController < ApplicationController
   private
 
   def thinker_params
-    params.permit(:name, :image, :times_studied, :category_name)
+    params.permit(:name, :image, :times_studied, :personality, :category_name)
   end
 end

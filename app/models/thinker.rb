@@ -16,7 +16,7 @@ class Thinker < ApplicationRecord
   end
 
   def category_name
-    category.name
+    self.category.name
   end
 
   def increase_times_studied
